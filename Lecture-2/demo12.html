@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+Username<br>
+<input type="text" id="t1">
+<span id="a1"></span><br>
+Password<br>
+<input type="password" id="t2">
+<span id="p1"></span><br>
+<input type="button" onclick="demo()" value="Set Value">
+<script>
+function demo(){
+var x1=document.getElementById("t1");
+var x2=document.getElementById("t2");
+var y1=document.getElementById("a1");
+var y2=document.getElementById("p1");
+y1.innerText=x1.value
+y2.innerText=x2.value
+x1.style.color="green"
+}
+</script>
+</body>
+</html>
