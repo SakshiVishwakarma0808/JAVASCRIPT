@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+<h1 id="h">Welcome to the world of JAVASCRIPT</h1>
+<span id="msg"></span>
+<button onclick="myFun()">CLICK ME</button>
+<script>
+function myFun(){
+var x=document.getElementById("h").innerText;
+document.getElementById("msg").innerText=x;
+document.getElementById("msg").innerHTML="<h1>Techpile Technology</h1>";// innerHTML is support the tags
+alert("Value is : "+x);
+}
+</script>
+</body>
+</html>
