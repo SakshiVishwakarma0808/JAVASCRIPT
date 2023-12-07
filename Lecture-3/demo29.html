@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<input type="text" id="t1">
+<input type="text" id="t2">
+<script>
+setInterval(function(){
+var a=document.querySelector("#t1").value;
+var b=document.querySelector("#t2").value;
+var path1=a.value;
+var path2=b.value;
+a.value=path2;
+b.value=path1;
+},3000)
+</script>
+</body>
+</html>
