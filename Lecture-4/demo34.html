@@ -1,0 +1,57 @@
+<html>
+<head>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<style>
+#fpform,#loginform
+{
+display:none;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-4 mx-auto p-3 mt-4 bg-info">
+<a href="#" class="btn btn-dark"onclick="demo2()" >Register</a>
+<a href="#" class="btn btn-dark float-end" onclick="demo1()">Login</a>
+<p id="regform">
+Name<input type="text" class="form-control">
+Email<input type="email" class="form-control">
+Password<input type="password" class="form-control">
+Phone<input type="number" class="form-control">
+</p>
+<p id="loginform" >
+Username<input type="email" class="form-control">
+Password<input type="password" class="form-control">
+<input type="submit" class="btn btn-dark mt-2" value="Login">
+<a href="#" onclick="demo3()">Forgot Password</a>
+</p>
+<p id="fpform">
+<input type="email" class="form-control">
+<input type="submit" class="btn btn-dark mt-2" value="Send OTP">
+</p>
+</div>
+</div>
+</div>
+<script>
+var rform=document.querySelector("#regform")
+var lform=document.querySelector("#loginform")
+var fform=document.querySelector("#fpform")
+function demo1(){
+lform.style.display="block";
+rform.style.display="none"
+fform.style.display="none"
+}
+function demo2(){
+rform.style.display="block"
+lform.style.display="none"
+fform.style.display="none"
+}
+function demo3(){
+fform.style.display="block"
+lform.style.display="none"
+rform.style.display="none"
+}
+</script>
+</body>
+</html>
