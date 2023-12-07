@@ -1,0 +1,25 @@
+<html>
+<head></head>
+<body>
+<input type="number">
+<span></span><br>
+<button onclick="demo()">Check</button>
+<script>
+function demo(){
+var x=documnet.querySelector("input");
+var sp=document.querySelector("span");
+var len=x.value.length;
+if(len!=6){
+sp.innerText="Invalid Pincode";
+sp.style.color="red";
+x.style.border="2px solid red";
+}
+else{
+sp.innerText="Valid Pincode";
+sp.style.color="green";
+x.style.border="2px solid green";
+}
+}
+</script>
+</body>
+</html>
