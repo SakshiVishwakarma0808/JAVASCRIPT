@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<input type="password" id="p1">
+<span></span>
+<input type="button" onclick="demo()" id="p2" value="SHOW">
+<script>
+function demo(){
+var a=document.querySelector("#p1")
+var c=document.querySelector("span")
+var b=document.querySelector("#p2")
+//a.type="text"
+//if(a.value!=""){
+if(b.value=="SHOW"){
+b.value="HIDE"
+a.type="text"
+a.style.border="2px solid red"
+a.style.color="red"
+b.style.color="white"
+b.style.background="red"
+b.style.border="2px solid red"
+//}
+}
+else{
+b.value="SHOW"
+a.type="password"
+a.style.border="2px solid green"
+a.style.color="red"
+b.style.background="green"
+b.style.border="2px solid green"
+b.style.color="white"
+}
+//}
+//else{
+//c.innerText="Please Enter Your Password"
+//}
+}
+</script>
+</body>
+</html>
