@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+<h1 id="t1">Preeti</h1>
+<h1 id="t2">Shikha</h1>
+<h1 id="t3">Ruchi</h1>
+<h1 id="t4">Mahjavi</h1>
+<h1 id="t5">Dipanshi</h1>
+<script>
+function myFun(){
+var x1=document.querySelector("#t1")
+var x2=document.querySelector("#t2")
+var x3=document.querySelector("#t3")
+var x4=document.querySelector("#t4")
+var x5=document.querySelector("#t5")
+var path1=x1.innerHTML
+var path2=x2.innerHTML
+var path3=x3.innerHTML
+var path4=x4.innerHTML
+var path5=x5.innerHTML
+x1.innerHTML=path5
+x2.innerHTML=path4
+x3.innerHTML=path3
+x4.innerHTML=path2
+x5.innerHTML=path1
+}
+setInterval("myFun()",1000)
+</script>
+</body>
+</html>
