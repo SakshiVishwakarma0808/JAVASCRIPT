@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body onchange="myFun()">
+<select id="s1">
+<option>---Select Your Language---</option>
+<option>.NET</option>
+<option>PHP</option>
+<option>PYTHON</option>
+<option>JAVA</option>
+<option>ANDROID</option>
+</select>
+<span></span>
+<script>
+function myFun(){
+var x=document.querySelector("#s1")
+var sp=document.querySelector("span")
+sp.innerHTML="<h3>Selected Value is : </h3>"+x.value
+}
+</script>
+</body>
+</html>
