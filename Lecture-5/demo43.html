@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<p></p>
+<script>
+var arr=new Array()
+for(var i=0;i<=4;i++)
+{
+var data=prompt("Enter Your Data in insert in Array : ")
+arr[i]=data
+}
+var d=document.querySelector("p")
+var r="<select>"
+for(var a of arr){
+r=r+"<option>"+a+"</option>";
+}
+r=r+"</select>"
+d.innerHTML=r;
+</script>
+</body>
+</html>
