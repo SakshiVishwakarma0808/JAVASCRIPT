@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+<button onclick="demo()">Click ME</button>
+<p></p>
+<script>
+function demo(){
+var p=document.querySelector("p")
+var arr=["Summer Traning","Winter Training","IT Training","Apprenticeship"]
+var res="<ul>"
+for(var i=0;i<arr.length;i++)
+{
+res=res+"<li>"+arr[i]+"</li>"
+}
+res=res+"</ul>"
+p.innerHTML=res
+}
+</script>
+</body>
+</html>
