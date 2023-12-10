@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body onload="demo()">
+<p></p>
+<script>
+function demo(){
+var stuName=["RAM","SHYAM","AJAY","ROHIT","MOHAN"]
+var stuCity=["SULTANPUR","LUCKNOW","FAIZABAAD","DELHI","HARIYANA"]
+var stuCollege=["IET","MMMUT","GGPA","BNCTE","RRIMT"]
+var res="<table border='1px'>"
+for(var i in stuName){
+res=res+"<tr><td>"+stuName[i]+"</td>"+"<td>"+stuCity[i]+"</td>"+"<td>"+stuCollege[i]+"</td></tr>"
+document.querySelector("p").innerHTML=res
+//alert(res)
+}
+res=+"</table>"
+}
+</script>
+</body>
+</html>
