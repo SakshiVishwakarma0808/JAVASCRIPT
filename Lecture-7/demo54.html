@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<script>
+var demo=(...arr)=>
+{
+var r=0
+for(var i of arr){
+r=r+i
+}
+document.write("Sum is : "+r+"<br>")
+}
+x=parseInt(prompt("Enter First Number : "));
+y=parseInt(prompt("Enter Second Number : "));
+z=parseInt(prompt("Enter third Number : "));
+//demo(10,20)
+//demo(10,20,30)
+demo(x,y,z)
+</script>
+</body>
+</html>
