@@ -1,0 +1,45 @@
+<html>
+<head></head>
+<body>
+<button onclick="arr.forEach(demo)">DropDown</button>
+<button onclick="arr.forEach(demo1)">UL</button>
+<button onclick="arr.forEach(demo2)">OL</button>
+<p></p>
+<script>
+var arr=["html","css","js","jquery"]
+function demo(){
+var p=document.querySelector("p")
+
+var r="<select>"
+for(var a of arr){
+r=r+"<option>"+a+"</option>"
+}
+r=r+"</select>"
+p.innerHTML=r
+}
+var arr1=["html","css","js","jquery"]
+function demo1(){
+var p=document.querySelector("p")
+
+var r="<ul>"
+for(var a of arr){
+r=r+"<li>"+a+"</li>"
+}
+r=r+"</ul>"
+p.innerHTML=r
+}
+var arr2=["html","css","js","jquery"]
+function demo2(){
+var p=document.querySelector("p")
+
+var r="<ol>"
+for(var a of arr){
+r=r+"<li>"+a+"</li>"
+}
+r=r+"</ol>"
+p.innerHTML=r
+}
+
+</script>
+</body>
+</html>
