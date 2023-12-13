@@ -1,0 +1,43 @@
+<html>
+<head></head>
+<body>
+<input type="radio" value="ddl" onchange="demo(this)" name="a">Dropdown List
+<input type="radio" value="ul" onchange="demo(this)" name="a">UL
+<input type="radio" value="ol" onchange="demo(this)" name="a">OL
+<p id="p"></p>
+<script>
+function demo(x){
+var arr=["HTML","CSS","JS","JQUERY"]
+var color=["red","green","blue","orange"]
+var color1=["navy","pink","maroon","yellow"]
+var v=x.value
+if(v=="ddl"){
+var res="<select>"
+arr.forEach(function(data,i){
+res=res+"<option style='background:"+color[i]+";"+color1[i]+"';>"+data+"</option>"
+})
+res=res+"</select>"
+p.innerHTML=res
+
+}
+if(v=="ul"){
+var res="<ul>"
+arr.forEach(function(data){
+res=res+"<li>"+data+"</li>"
+})
+res=res+"</li>"
+p.innerHTML=res
+}
+if(v=="ol"){
+var res="<ol>"
+arr.forEach(function(data){
+res=res+"<li>"+data+"</li>"
+})
+res=res+"</ol>"
+p.innerHTML=res
+}
+}
+</script>
+</script>
+</body>
+</html>
