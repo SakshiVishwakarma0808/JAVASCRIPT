@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+
+NAME :<input type="text" id="a1"><br><br>
+EMAIL :<input type="email" id="a2"><br><br>
+NUMBER :<input type="number"id="a3"><br><br>
+PASSWORD :<input type="password"id="a4"><br><br>
+<button onclick="demo()">GET VALUE</button>
+<p></p>
+<script>
+var  demo=()=>{
+var x1=document.querySelector("#a1").value
+var x2=document.querySelector("#a2").value
+var x3=document.querySelector("#a3").value
+var x4=document.querySelector("#a4").value
+document.querySelector("p").innerHTML=`
+<div>
+<b>Name is : </b> ${x1}<br>
+<b>Email is : </b> ${x2}<br>
+<b>Number is : </b> ${x3}<br>
+<b>Password is : </b> ${x4}<br></div>
+<button onclick="demo1()">Print</button>
+`
+}
+function demo1(){
+var backup=document.body.innerHTML
+x=document.querySelector("div").innerHTML
+document.body.innerHTML=x
+print()
+document.body.innerHTML=backup;
+}
+</script>
+</body>
+</html>
