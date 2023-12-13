@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+<p id="state"></p>
+<p id="city"></p>
+<script>
+var state=["UP","MP","DELHI"]
+var upCity=["Sultanpur","Faizabaad","Amethi","Lucknow"]
+var mpCity=["Indore","Bhopal","Ujjain","Gwalior"]
+var delhiCity=["Mahipalpur","Bankner","Mandoli","Dayalpur"]
+var r="<select onchange='demo(this)'><option>--select city--</option>"
+state.forEach((data)=>{
+r=r+"<option>"+data+"</option>"
+})
+r+="</select>"
+document.querySelector("#state").innerHTML=r
+var demo=(x)=>{
+var v=x.value
+var res="<select>"
+if(v=="UP"){
+upCity.forEach((data)=>{
+res=res+"<option>"+data+"</option>"
+})
+res=res+"</select>"
+document.querySelector("#city").innerHTML=res
+}
+else if(v=="MP"){
+mpCity.forEach((data)=>{
+res=res+"<option>"+data+"</option>"
+})
+res=res+"</select>"
+document.querySelector("#city").innerHTML=res
+}
+else if(v=="DELHI"){
+delhiCity.forEach((data)=>{
+res=res+"<option>"+data+"</option>"
+})
+res=res+"</select>"
+document.querySelector("#city").innerHTML=res
+}
+else{
+alert("Please Select Any City")
+document.querySelector("#state").style.border="2px solid red"
+document.querySelector("#city").style.display="none"
+}
+}
+</script>
+</body>
+</html>
