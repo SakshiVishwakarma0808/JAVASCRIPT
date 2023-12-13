@@ -1,0 +1,47 @@
+<html>
+<head></head>
+<body>
+<!--
+<select onclick="demo()">
+<option value="up" onclick="demo(this)">UP</option>
+<option value="mp"  onclick="demo(this)">MP</option>
+<option value="delhi"  onclick="demo(this)">DELHI</option>
+</select>-->
+<input type="radio" value="up" onclick="demo(this)"name="a">UP
+<input type="radio" value="mp" onclick="demo(this)"name="a">MP
+<input type="radio" value="delhi" onclick="demo(this)"name="a">DELHI
+<p id="p"></p>
+<script>
+function demo(x){
+var upCity=["Sultanpur","Faizabaad","Amethi","Lucknow"]
+var mpCity=["Indore","Bhopal","Ujjain","Gwalior"]
+var delhiCity=["Mahipalpur","Bankner","Mandoli","Dayalpur"]
+var v=x.value
+if(v=="up"){
+var res="<select>"
+upCity.forEach(function(d){
+res=res+"<option>"+d+"</option>"
+})
+res=res+"</option>"
+p.innerHTML=res
+}
+if(v=="mp"){
+var res="<select>"
+mpCity.forEach(function(d){
+res=res+"<option>"+d+"</option>"
+})
+res=res+"</option>"
+p.innerHTML=res
+}
+if(v=="up"){
+var res="<select>"
+delhiCity.forEach(function(d){
+res=res+"<option>"+d+"</option>"
+})
+res=res+"</option>"
+p.innerHTML=res
+}
+}
+</script>
+</body>
+</html>
