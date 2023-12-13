@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+onkeypress<br>
+<input type="text" onkeypress="demo(this)"><br><br>
+onkeyup<br>
+<input type="text" onkeyup="demo(this)"><br><br>
+onfocus<br>
+<input type="text" onfocus="demo(this)"><br><br>
+onblur<br>
+<input type="text" onblur="demo(this)"><br><br>
+<button onclick="demo()">CLICK ME</button>
+<p></p>
+<script>
+var demo=(x)=>{
+document.querySelector("p").innerText=x.value
+//alert("OK")
+}
+</script>
+</body>
+</html>
