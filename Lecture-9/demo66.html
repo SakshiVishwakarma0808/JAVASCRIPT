@@ -1,0 +1,46 @@
+<html>
+<head>
+<link href="css/bootstrap" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/all.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet">
+<style>
+.h{
+height:500px;
+}
+.b{
+border-radius:10px;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row bg-primary" style="">
+<div class="col-sm-4 mx-auto bg-white ps-5 pe-5 pt-5 h mt-5 mb-5 b">
+<h2 class="text-center">Login Form</h2>
+<input type="eamil" placeholder="Email Address" id="a1" class="form-control mt-5">
+<span id="s1"></span><br><br>
+<input type="password" placeholder="Password" id="a2" class="form-control">
+<span id="s2"></span><br>
+<a href="#" class="text-primary" style="text-decoration:none">Forgot Password ?</a>
+<input type="button" class="form-control bg-primary text-light fs-5 mt-5" onclick="demo()" value="Login"><br>
+<center>
+<span>Not yet member?<a href="#" class="text-primary" style="text-decoration:none">Signup Now</a></span>
+</center>
+</div>
+</div>
+</div>
+<script>
+function demo(){
+if(a1.value=="" && a2.value==""){
+s1.innerText="Email can not be blank"
+s2.innerText="Password can not be blank"
+a1.style.border="1px solid red"
+a2.style.border="1px solid red"
+s1.style.color="red"
+s2.style.color="red"
+}
+}
+</script>
+</body>
+</html>
