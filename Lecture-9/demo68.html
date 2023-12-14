@@ -1,0 +1,38 @@
+<html>
+<head></head>
+<body>
+<table border="1px">
+<tr onclick="">
+<th>Name</th>
+<th>College</th>
+<th>City</th>
+</tr>
+<tr onclick="demo(this)" id="t2">
+<td>Ram</td>
+<td>IET Lucknow</td>
+<td>Lucknow</td>
+</tr>
+<tr onclick="demo(this)" id="t3">
+<td>Shayam</td>
+<td>GGPA</td>
+<td>Sultanpur</td>
+</tr>
+<tr onclick="demo(this)"id="t4">
+<td>Sita</td>
+<td>Delhi University</td>
+<td>Delhi</td>
+</tr>
+</table>
+<script>
+function demo(x){
+var x=confirm("Are you sure want to hide this row ?")
+if(x==true){
+t2.style.display="none"
+t3.style.display="show"
+t4.style.display="show"
+}
+}
+
+</script>
+</body>
+</html>
