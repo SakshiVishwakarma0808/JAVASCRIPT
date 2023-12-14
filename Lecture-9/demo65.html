@@ -1,0 +1,62 @@
+<html>
+<head>
+<link href="css/bootstrap" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/all.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet">
+<style>
+.h{
+height:400px;
+background:aqua;
+}
+.btn{
+height:40px;
+width:70px;
+background:grey;
+border-radius:5px;
+font-size:20px;
+text-color:black;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-5 mx-auto h mt-5 ps-5 pe-5">
+<h2 class="text-center mt-3">Simple Calculator using JS</h2>
+<hr>
+Enter 1st Value : <input class="ms-5" id="n1" type="number"><br><br>
+Enter 2nd Value : <input type="number" id="n2" class="ms-5"><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result : <input type="number" id="n3" class="ms-5"><br><br>
+<button class="btn ms-5" value="plus" onclick="demo(this)">+</button>
+<button class="btn" value="sub" onclick="demo(this)">-</button>
+<button class="btn" value="multi" onclick="demo(this)">*</button>
+<button class="btn" value="divide" onclick="demo(this)">/</button>
+<button class="btn" value="mdivide" onclick="demo(this)">%</button>
+<hr>
+</div>
+</div>
+</div>
+<script>
+function demo(x){
+var v=x.value
+if(v=="plus"){
+n3.value=parseInt(n1.value)+parseInt(n2.value);
+}
+else if(v=="sub"){
+n3.value=parseInt(n1.value)-parseInt(n2.value);
+}
+else if(v=="multi"){
+n3.value=parseInt(n1.value)*parseInt(n2.value);
+}
+else if(v=="divide"){
+n3.value=parseInt(n1.value)/parseInt(n2.value);
+}
+else if(v=="mdivide"){
+n3.value=parseInt(n1.value)%parseInt(n2.value);
+}
+}
+</script>
+</body>
+</html>
