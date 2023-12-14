@@ -1,0 +1,84 @@
+<html>
+<head>
+<!--<link href="css/bootstrap" rel="stylesheet">-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/all.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet">
+<style>
+.h{
+height:450px;
+}
+.b{
+border-radius:7px;
+}
+#lform{
+display:none;
+}
+</style>
+</head>
+<body class="bg-primary">
+
+<div class="conatiner">
+<div class="row">
+<div id="lform">
+<div class="col-sm-4 mx-auto h bg-light mt-5 mb-5 b ps-5 pe-5 ">
+<h2 class="text-center pt-3">Welcome back!</h2>
+<p class="text-secondary fs-5 text-center">Log in to access your account.</p>
+<input type="email" placeholder="Enter Email"  id="b1" class="form-control mb-4">
+<input type="password" placeholder="Enter Your Password" id="b2" class="form-control mb-5">
+<input type="button" class="form-control mb- bg-primary text-light fs-5 mb-4" onclick="myFun1()" value="Login">
+<center>
+<span>Not yet member?<a href="#" class="text-primary" style="text-decoration:none" onclick="demo2()">Signup Now</a></span>
+</center>
+<div id="sp1"></div>
+
+</div>
+</div>
+<!--<div class="row">-->
+<div id="sform">
+<div class="col-sm-4 mx-auto h bg-light mt-5 mb-5 b ps-5 pe-5 ">
+<h2 class="text-center pt-3">Join us Today!</h2>
+<p class="text-secondary fs-5 text-center">Sign up now to become a member.</p>
+<input type="text" placeholder="Enter Your Name" id="a1" class="form-control mb-4">
+<input type="email" placeholder="Enter Your Email" id="a2" class="form-control mb-4">
+<input type="password" placeholder="Enter Your Password" id="a3" class="form-control mb-5">
+<input type="button" class="form-control mb- bg-primary text-light fs-5 mb-4" onclick="myFun()" value="Sign Up">
+<center>
+<span>Already a member?<a href="#" class="text-primary" style="text-decoration:none" onclick="demo1()">Login Here</a></span>
+</center>
+<span id="sp"></span>
+
+</div>
+</div>
+</div>
+</div>
+<script>
+var loginform=document.querySelector("#lform")
+var signform=document.querySelector("#sform")
+var demo1=()=>{
+loginform.style.display="block";
+signform.style.display="none";
+}
+var demo2=()=>{
+loginform.style.display="none";
+signform.style.display="block";
+}
+function myFun(){
+ n=document.querySelector("#a1")
+ e=document.querySelector("#a2")
+ p=document.querySelector("#a3")
+sp.innerHTML="Name is : "+n.value+"<br>"+"Email is :"+e.value+"<br>"+"Password is :"+p.value
+}
+function myFun1(){
+e1=document.querySelector("#b1")
+p1=document.querySelector("#b2")
+if(e1.value==e.value){
+sp1.innerHTML="<center><h1 style='color:green'><b1>Login Successfully</b1></h1></center>"
+}
+else{
+sp1.innerHTML="<center><h1 style='color:red'><b1>Email & Password not Matcheed</b1></h1></center>"
+}
+}
+</script>
+</body>
+</html>
