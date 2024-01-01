@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+#div1{
+height:400px;
+width:700px;
+margin:50px auto;
+border:2px solid black;
+}
+#div2{
+height:100px;
+width:500px;
+margin:50px auto;
+border:2px solid black;
+}
+</style>
+</head>
+<body>
+<div id="div1">
+<div id="div2"></div>
+<input type="button" onclick="demo1()" value ="Set Color" style="margin-left:300px">
+</div>
+<script>
+var demo=()=>{
+var str="ABCDEF123456789abcdef"
+var color="#"
+for(var i=1;i<=6;i++){
+var rindex=Math.floor(Math.random()*str.length)
+var rchar=str[rindex]
+color=color+rchar
+}
+var dv=document.querySelector("#div2")
+dv.style.background=color
+}
+setInterval("demo()",2000)
+var demo1=()=>{
+var dv=document.querySelector("#div2")
+var color=dv.innerText
+document.querySelector("#div1").style.background=color
+}
+</script>
+</body>
+</html>
