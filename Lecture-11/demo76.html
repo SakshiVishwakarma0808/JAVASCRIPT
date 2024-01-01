@@ -1,0 +1,65 @@
+<html>
+<head>
+<style>
+div{
+height:500px;
+width:600px;
+margin:50px auto;
+border:2px solid black;
+padding-top:40px;
+padding-left:20px;
+box-sizing:border-box;
+}
+.btn1{
+height:60px;
+width:350px;
+font-size:15px;
+}
+.btn2{
+height:60px;
+width:200px;
+
+}
+</style>
+</head>
+<body onload="demo()">
+<div>
+<h1>Check Captcha is Correct OR Not</h1>
+<input class="btn1" type="text" readonly id="a1">
+<button class="btn2"id="b1" onclick="demo()">Generate Capcha</button><br><br>
+<input class="btn1"type="text" id="a2"><br><br>
+<button class="btn2"id="b2" onclick="demo1()">Check</button>
+<input type="button" class="btn2" value="Refresh Page" onclick="window.location.reload(true)">
+<p></p>
+</div>
+<script>
+var demo=()=>{
+var str="ABCDabcd1234#$&*"
+var cap="";
+for(var i=1;i<=6;i++){
+var rindex=Math.floor(Math.random()*str.length)
+var rchar=str[rindex]
+cap=cap+rchar
+}
+var sp1=document.querySelector("#a1")
+var sp2=document.querySelector("#a2")
+sp1.value=cap
+}
+var demo1=()=>{
+var sp1=document.querySelector("#a1")
+var sp2=document.querySelector("#a2")
+if(sp1.value==sp2.value){
+var c=document.querySelector("p")
+c.innerHTML="<h2>Correct</h2>"
+c.style.color="green"
+}
+else{
+var d=document.querySelector("p")
+d.innerHTML="<h2>InCorrect</h2>"
+d.style.color="red"
+
+}
+}
+</script>
+</body>
+</html>
