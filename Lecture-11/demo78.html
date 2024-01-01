@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../boot/css/all.min.css">
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <script src="../boot/js/bootstrap.bundle.js"></script>
+    <style>
+         
+        #row{
+            min-height: 400px;
+            margin: 100px 0px;
+        }
+        .out{
+            border: 3px solid double black;
+            box-sizing: border-box;
+        }
+        #r{
+            height: 70px;
+            border: 2px solid black;
+            justify-content: space-around;
+            
+        }
+        .a{
+            height: 70px;
+            width: 70px;
+            font-size: 35px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 70px;
+            background-color: gray;
+            color: black;
+            border: 2px solid black;
+             
+            border-radius: 5px;
+            margin: 25px;
+        }
+         
+        .a:active{
+            background-color: white;
+            color: black;
+        }
+        #w{
+            font-size: 22px;
+            font-weight: 600;
+            padding-left: 10px;
+            line-height: 70px;
+        }
+        #sc{
+            font-size: 22px;
+            font-weight: 600;
+            padding-left: 10px;
+            line-height: 70px;
+            color: blue;
+        }
+        p{
+            text-align: center;
+            font-size: 28px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="row" id="row"> 
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 p-5 out border border-2 border-dark">
+            <p class="mb-4">GUESS THE NUMBER</p>
+             <div class="row" id="r">
+                <div class="col-sm-8" id="w"></div>
+                <div class="col-sm-4" id="sc"></div>
+             </div>
+             <div class="row">
+                <div class="a" onclick="demo(this)">1</div>
+                <div class="a" onclick="demo(this)">2</div>
+                <div class="a" onclick="demo(this)">3</div>
+                <div class="a" onclick="demo(this)">4</div>
+                <div class="a" onclick="demo(this)">5</div>
+                <div class="a" onclick="demo(this)">6</div>
+             </div>
+            <button class="btn btn-dark" onclick="demo1()">Refresh Game</button>
+        <div class="col-sm-4"></div>
+    </div>
+
+    <script>
+        var str ="123456";
+        var l = str.length;
+        i = 0;
+        j = 0;
+        var w =document.getElementById("w")
+        var sc =document.getElementById("sc")
+        sc.innerText="Score : "+i+"/"+j;
+        function demo(x){
+            var rindex = Math.floor(Math.random()*l); 
+            num=str.charAt(rindex)
+           if(x.innerText==num){
+                w.innerText=num+" You win!"
+                w.style.color="green"
+                i++
+           }
+           else{
+                w.innerText=num+" You Loose!"
+                w.style.color="red"   
+           }
+           j++
+           sc.innerText="Score : "+i+"/"+j
+        }
+        function demo1(){
+            i=0
+            j=0
+            w.innerText=""
+            sc.innerText="Score : "+i+"/"+j;
+}
+</script>
+</body>
+</html>
