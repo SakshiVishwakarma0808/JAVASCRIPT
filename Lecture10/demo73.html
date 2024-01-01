@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+div{
+height:500px;
+width:1200px;
+margin:50px auto;
+border:20px groove maroon;
+line-height:500px;
+font-size:100px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<div>
+TECHPILE
+</div>
+<script>
+var demo=()=>{
+var str="ABCDEF0123456789abcdef"//0-21
+var color1="#"
+var color2="#"
+var color3="#"
+for(var i=0;i<6;i++){
+var rindex1=Math.floor(Math.random()*str.length)
+var rindex2=Math.floor(Math.random()*str.length)
+var rindex3=Math.floor(Math.random()*str.length)
+var rchar1=str[rindex1]
+var rchar2=str[rindex2]
+var rchar3=str[rindex3]
+color1=color1+rchar1
+color2=color2+rchar2
+color3=color3+rchar3
+}
+var dv=document.querySelector("div")
+dv.style.background=color1;
+dv.style.color=color2;
+dv.style.border="20px groove "+color3;
+dv.style.transition:".5s"
+}
+setInterval("demo()",2000)
+</script>
+</body>
+</html>
