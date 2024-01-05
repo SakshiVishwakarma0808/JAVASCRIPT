@@ -1,0 +1,13 @@
+<html>
+<head></head>
+<body>
+<textarea></textarea>
+<script>
+document.querySelector("textarea").addEventListener("paste",function(){
+this.style.color="red"
+event.preventDefault()
+alert("Paste event is disabled")
+})
+</script>
+</body>
+</html>
