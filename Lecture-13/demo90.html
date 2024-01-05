@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+<input type="text" value="Techpile Technology">
+<span></span>
+<script>
+document.querySelector("input").addEventListener("cut",function (){
+this.style.border="2px solid red"
+event.preventDefault()
+document.querySelector("span").innerHTML="cut event is disabled".fontcolor("red")
+})
+</script>
+</body>
+</html>
