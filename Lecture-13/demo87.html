@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+<select>
+<option>---Select---</option>
+<option>HTML</option>
+<option>JAVASCRIPT</option>
+<option>REACT JS</option>
+<option>VUE JS</option>
+<option>BOOTSTRAP 5</option>
+</select>
+<p></p>
+<script>
+<!-- function demo(){ -->
+<!-- document.querySelector("p").innerText=x.value -->
+<!-- } -->
+document.querySelector("select").addEventListener("change",function (){
+document.querySelector("p").innerText=this.value;
+})
+</script>
+</body>
+</html>
